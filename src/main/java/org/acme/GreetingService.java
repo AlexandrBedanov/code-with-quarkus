@@ -7,11 +7,11 @@ public class GreetingService {
 
 public String greeting(String name){
 
-    return "hello"  + name;
+    return "hello"  + " " +  name;
 }
 
     public String firstService(String name) {
-    return "My first service" + name;
+    return "My first service";
     }
 
     public String secondService(String name){

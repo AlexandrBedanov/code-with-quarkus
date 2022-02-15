@@ -22,26 +22,16 @@ public class GreetingResourseTest {
 
 
     @Test
-    public void testGreetingEndpoint() {
-
-        given()
-                .when().get("hello")
-                .then()
-                .statusCode(200)
-                .body(is("hello"));
-    }
-
-    @Test
     public void testHelloEndpoint() {
-        String uuid = UUID.randomUUID().toString();
         given()
-                .pathParam("name", uuid)
-                .when().get("/hello/greeting/{name}")
+                .when().get("/greeting")
                 .then()
                 .statusCode(200)
-                .body(is("hello" + uuid));
+                .body(is("hello quarkus!" ));
 
     }
 }
+
+
 
 
